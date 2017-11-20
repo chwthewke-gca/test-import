@@ -16,13 +16,8 @@ val pathKataSettings =
     Dependencies.settings :+
     (testOptions in Test += Tests.Argument( TestFrameworks.ScalaTest, "-oDF" ))
 
-val `path-kata-core` = project
+val `path-kata` = project
+  .in( file( "." ) )
   .settings( pathKataSettings )
   .settings( SbtBuildInfo.buildSettings( "PathKataCoreBuildInfo" ) )
   .settings( Console.coreImports.settings )
-
-val `path-kata` = project
-  .in( file( "." ) )
-  .settings( sharedSettings )
-  .settings( Dependencies.overrides )
-  .aggregate( `path-kata-core` )
