@@ -9,15 +9,15 @@ object Scalac {
     "-feature",
     "-language:higherKinds",
     "-unchecked",
-    "-Xfatal-warnings",
+//    "-Xfatal-warnings",
     "-Xfuture",
     "-Xlint",
     "-Yno-adapted-args",
-    "-Ypartial-unification",
-    "-Ywarn-dead-code",
-    "-Ywarn-numeric-widen",
-    "-Ywarn-unused-import",
-    "-Ywarn-value-discard"
+    "-Ypartial-unification"
+//    "-Ywarn-dead-code",
+//    "-Ywarn-numeric-widen",
+//    "-Ywarn-unused-import",
+//    "-Ywarn-value-discard"
   )
 
   def workaroundForIntellij( opts: Seq[String] ): Seq[String] =
